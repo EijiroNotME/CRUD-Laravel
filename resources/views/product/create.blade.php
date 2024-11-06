@@ -27,26 +27,29 @@
 
         <div class="flex flex-col">
             <label for="name" class="text-gray-700 font-medium mb-1">Name</label>
-            <input type="text" name="name" id="name" required placeholder="Enter name" class="border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200 focus:outline-none">
+            <input type="text" name="name" id="name" required placeholder="Enter name" value="{{ old('name') }}" class="border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200 focus:outline-none">
         </div>
 
         <div class="flex flex-col">
             <label for="qty" class="text-gray-700 font-medium mb-1">Quantity</label>
-            <input type="number" name="qty" id="qty" required placeholder="Enter quantity" class="border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200 focus:outline-none">
+            <input type="number" name="qty" id="qty" required placeholder="Enter quantity" value="{{ old('qty') }}" class="border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200 focus:outline-none">
         </div>
 
         <div class="flex flex-col">
             <label for="price" class="text-gray-700 font-medium mb-1">Price</label>
-            <input type="text" name="price" id="price" required placeholder="0.00" class="border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200 focus:outline-none">
+            <input type="text" name="price" id="price" required placeholder="0.00" value="{{ old('price') }}" class="border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200 focus:outline-none">
         </div>
 
         <div class="flex flex-col">
             <label for="description" class="text-gray-700 font-medium mb-1">Description</label>
-            <textarea name="description" id="description" required placeholder="Enter description" class="border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200 focus:outline-none h-24"></textarea>
+            <textarea name="description" id="description" required placeholder="Enter description" class="border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200 focus:outline-none h-24">{{ old('description') }}</textarea>
         </div>
 
-        <div class="flex justify-center">
-            <input type="submit" value="ADD" class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-blue-700 transition">
+        <div class="flex justify-end gap-2">
+            <input type="submit" value="Add" class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-blue-700 transition">
+            <a href="{{ route('product.index') }}" class="px-6 py-2 bg-red-600 text-white font-medium rounded-md shadow hover:bg-red-700 transition">
+                Cancel
+            </a>
         </div>
     </form>
 

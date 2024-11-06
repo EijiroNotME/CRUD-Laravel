@@ -10,9 +10,9 @@
 <body class="bg-gray-100">
     <div class="flex flex-col items-center min-h-screen p-6">
         <h1 class="text-3xl font-bold text-gray-800 mb-6 uppercase">Product List</h1>
-
+        
         @if(session()->has('success'))
-            <div class="mb-4 px-4 py-2 bg-green-100 text-green-700 rounded-md shadow-md">
+            <div class="mb-4 px-4 py-2 bg-green-100 text-green-700 rounded-md shadow-md absolute right-2 top-2">
                 {{ session('success') }}
             </div>
         @endif
@@ -34,7 +34,7 @@
                         
                         <p class="text-sm text-gray-600 italic">{{ $product->description }}</p>
                     </div>
-                    <div class="flex justify-start gap-2 p-4 bg-gray-100">
+                    <div class="flex justify-start gap-1 p-4 bg-gray-100">
                         <a href="{{ route('product.edit', ['product' => $product]) }}" class=" text-center px-3 py-1 w-16 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600 transition">
                             Edit
                         </a>
