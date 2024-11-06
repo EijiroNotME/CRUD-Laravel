@@ -46,8 +46,11 @@
             <textarea name="description" id="description" required placeholder="Enter description" class="border border-gray-300 rounded-md px-4 py-2 focus:ring focus:ring-blue-200 focus:outline-none h-24">{{ $product->description }}</textarea>
         </div>
 
-        <div class="flex justify-center">
+        <div class="flex justify-end gap-2">
             <input type="submit" value="UPDATE" class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-md cursor-pointer hover:bg-blue-700 transition">
+            <a href="{{ route('product.index') }}" class="px-6 py-2 bg-red-600 text-white font-medium rounded-md shadow hover:bg-red-700 transition">
+                Cancel
+            </a>
         </div>
     </form>
 

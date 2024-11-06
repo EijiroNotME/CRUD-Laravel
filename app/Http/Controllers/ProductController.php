@@ -25,7 +25,7 @@ class ProductController extends Controller
        ]);
 
        $newProduct = Product::create($data);
-       return redirect(route(('product.index')));
+       return redirect(route(('product.index')))->with('success', 'Product Added Successfully');
     }
 
     Public function edit(Product $product){
