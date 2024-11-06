@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .input-default {
+        @apply border border-gray-300 p-2 rounded;
+    }
+}
